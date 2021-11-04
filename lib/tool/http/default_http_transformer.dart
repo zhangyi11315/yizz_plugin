@@ -5,23 +5,23 @@ import 'http_transformer.dart';
 
 class DefaultHttpTransformer extends HttpTransformer {
   @override
-  HttpResponse parse(Response response) {
+  HttpResponse<T> parse<T>(Response response) {
     if (response.data['Response']['Header']['Success'] == true) {
       if(_isTokenTimeout(response.data['Response']['Header']['ErrorCode'])) {
         return HttpResponse.failureFromError(
-            UnauthorisedException(message: "没有权限", code: 401));
+            UnauthorisedException(message: "没有权限", code: '401'));
       }{
         return HttpResponse.success(response.data["Response"]["Body"]);
       }
     } else {
       return HttpResponse.failure(
-          errorMsg: response.data["Response"]["Header"]["ErrorInfo"], errorCode: int.parse(response.data["Response"]["Header"]["ErrorCode"]));
+          errorMsg: response.data["Response"]["Header"]["ErrorInfo"], errorCode: response.data["Response"]["Header"]["ErrorCode"]);
     }
   }
 
   //token验证
-  bool _isTokenTimeout(int? code) {
-    return code == 401;
+  bool _isTokenTimeout(String? code) {
+    return code == '401';
   }
 
   /// 单例对象
