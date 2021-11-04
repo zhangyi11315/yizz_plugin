@@ -22,7 +22,7 @@ class HttpClient {
         HttpTransformer? httpTransformer,
         bool isShowLoading = true}) async {
     try {
-      if(isShowLoading) showLoading(Get.context);
+      if(isShowLoading) EasyLoading.show(status: 'loading...');
       var response = await _dio.get(
         uri,
         queryParameters: queryParameters,
@@ -30,10 +30,10 @@ class HttpClient {
         cancelToken: cancelToken,
         onReceiveProgress: onReceiveProgress,
       );
-      if(isShowLoading) Get.back();
+      if(isShowLoading) EasyLoading.dismiss();
       return handleResponse(response, httpTransformer: httpTransformer);
     } on Exception catch (e) {
-      if(isShowLoading) Get.back();
+      if(isShowLoading) EasyLoading.dismiss();
       return handleException(e);
     }
   }
@@ -48,7 +48,7 @@ class HttpClient {
         HttpTransformer? httpTransformer,
         bool isShowLoading = true}) async {
     try {
-      if(isShowLoading) showLoading(Get.context);
+      if(isShowLoading) EasyLoading.show(status: 'loading...');
       var response = await _dio.post(
         uri,
         data: data,
@@ -58,10 +58,10 @@ class HttpClient {
         onSendProgress: onSendProgress,
         onReceiveProgress: onReceiveProgress,
       );
-      if(isShowLoading) Get.back();
+      if(isShowLoading) EasyLoading.dismiss();
       return handleResponse(response, httpTransformer: httpTransformer);
     } on Exception catch (e) {
-      if(isShowLoading) Get.back();
+      if(isShowLoading) EasyLoading.dismiss();
       return handleException(e);
     }
   }

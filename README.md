@@ -1,6 +1,6 @@
 [![Flutter Community: after_layout](https://img1.baidu.com/it/u=2703618778,1142181950&fm=26&fmt=auto)](https://github.com/zhangyi11315/yizz_plugin)
 
-# yizz_plugin
+# yizz_plugin 0.0.4
 
 [Flutter常用工具类](https://pub.dartlang.org/packages/after_layout)
 
