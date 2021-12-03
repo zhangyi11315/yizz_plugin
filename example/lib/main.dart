@@ -109,7 +109,6 @@ class _TestButtonState extends State<TestButton> {
           //   i=2;
           //   entity = ent![0];
           // });
-          showDialogss();
         }, child: Text('Wechat')),
         if(i == 2) Image(image: AssetEntityImageProvider(entity),fit: BoxFit.cover,height: 100,width: 100,)
       ],

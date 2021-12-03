@@ -14,7 +14,7 @@ class HttpClient {
   HttpClient({dio.BaseOptions? options, HttpConfig? dioConfig})
       : _dio = AppDio(options: options, dioConfig: dioConfig);
 
-  Future<HttpResponse> get(String uri,
+  Future<HttpResponse<T>> get<T>(String uri,
       {Map<String, dynamic>? queryParameters,
         dio.Options? options,
         dio.CancelToken? cancelToken,

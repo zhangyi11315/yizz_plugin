@@ -1,11 +1,6 @@
 
-import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 void showToast(String message){
-  Get.snackbar('sssss', message);
-}
-
-void showDialogss(){
-  Get.dialog(Text('sss'));
+  EasyLoading.showToast(message,toastPosition:EasyLoadingToastPosition.bottom);
 }

@@ -12,6 +12,12 @@
       <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/yizz_plugin/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/yizz_plugin/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/yizz_plugin/build" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/yizz_plugin/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/yizz_plugin/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/yizz_plugin/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/yizz_plugin/example/ios/.symlinks/plugins/yizz_plugin/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/yizz_plugin/example/ios/.symlinks/plugins/yizz_plugin/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/yizz_plugin/example/ios/.symlinks/plugins/yizz_plugin/build" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Dart SDK" level="project" />
